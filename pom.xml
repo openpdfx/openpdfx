@@ -8,10 +8,9 @@
   <version>3.0.3-SNAPSHOT</version> <!-- artifact.version -->
   <packaging>pom</packaging>
 
-  <!-- please run mvn tidy:pom once in a while -->
-  <name>OpenPDF - Free and Open PDF</name>
+  <name>OpenPDFX - Free and Open PDF</name>
   <description>Open and Free PDF library.</description>
-  <url>https://github.com/LibrePDF/OpenPDF</url>
+  <url>https://github.com/openpdfx/openpdfx</url>
 
   <licenses>
     <license>
@@ -29,20 +28,14 @@
   <developers>
     <developer>
       <name>The OpenPDF Project</name>
-      <organizationUrl>https://github.com/librepdf</organizationUrl>
-    </developer>
-    <developer>
-      <name>Claudio Clemens</name>
-      <email>asturio@gmx.net</email>
-      <organization>LibrePDF</organization>
-      <organizationUrl>https://github.com/librepdf</organizationUrl>
+      <organizationUrl>https://github.com/openpdfx</organizationUrl>
     </developer>
   </developers>
 
   <scm>
-    <url>scm:git:https://github.com/LibrePDF/OpenPDF</url>
-    <connection>scm:git:https://github.com/LibrePDF/OpenPDF.git</connection>
-    <developerConnection>scm:git:https://github.com/LibrePDF/OpenPDF.git</developerConnection>
+    <url>scm:git:https://github.com/openpdfx/openpdfx</url>
+    <connection>scm:git:https://github.com/openpdfx/openpdfx.git</connection>
+    <developerConnection>scm:git:https://github.com/openpdfx/openpdfx.git</developerConnection>
   </scm>
 
   <modules>
