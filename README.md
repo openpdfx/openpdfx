@@ -19,7 +19,6 @@ The features of OpenPDF include:
   text, and more.
 * [Openpdf-html](openpdf-html) Create PDF files from HTML, using OpenPDF-html which is a fork of Flying Saucer.
 * [Openpdf-renderer](openpdf-renderer) Render PDF files as images using openpdf-render.
-* [Openpdf-kotlin](openpdf-kotlin) Kotlin module for easy creation of PDF files using Kotlin.
 * Text and Font Support: You can add text to PDF documents using various fonts and styles, and extract text from PDF
   files.
 * Graphics and Images: OpenPDF supports the addition of images and graphics to PDF files.
@@ -39,7 +38,6 @@ The features of OpenPDF include:
 ![Java 17](https://img.shields.io/badge/Java-17-blue?logo=java&logoColor=white)
 ![Java 21](https://img.shields.io/badge/Java-21-blue?logo=java&logoColor=white)
 ![Java 24](https://img.shields.io/badge/Java-24-blue?logo=java&logoColor=yellow)
-[![Kotlin](https://img.shields.io/badge/Kotlin-Supported-ADD8E6?logo=kotlin&logoColor=white)](https://github.com/LibrePDF/OpenPDF/tree/master/openpdf-kotlin)
 
 ## Use OpenPDF as Maven dependency
 
