@@ -3,9 +3,9 @@
 OpenPDFX is an open-source Java library for creating, editing, rendering, and encrypting PDF documents, as well as generating PDFs from HTML. It is licensed under the LGPL and MPL open source licenses. 
 We welcome contributions from other developers. Please feel free to submit pull-requests and bug reports to this GitHub repository.
 
-## OpenPDFX version 3.0.1 released 2025-09-30
+## OpenPDFX version 3.0.2 released 2025-09-30
 
-Get version 3.0.1 here: https://github.com/openpdfx/openpdfx/releases/tag/3.0.1 
+Get version 3.0.2 here: https://github.com/openpdfx/openpdfx/releases/tag/3.0.2 
 
 ## Features
 
@@ -45,7 +45,7 @@ Openpdfx can be used as a Maven dependency. It is built and distributed using Ji
     <dependency>
       <groupId>com.github.openpdfx</groupId>
       <artifactId>openpdfx</artifactId>
-      <version>3.0.1</version>
+      <version>3.0.2</version>
     </dependency>
 ```
 
