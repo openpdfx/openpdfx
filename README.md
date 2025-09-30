@@ -18,6 +18,8 @@ The features of OpenPDF include:
   text, and more.
 * [Openpdf-html](openpdf-html) Create PDF files from HTML, using OpenPDF-html which is a fork of Flying Saucer.
 * [Openpdf-renderer](openpdf-renderer) Render PDF files as images using openpdf-render.
+* [Openpdfx-ai](openpdfx-ai) AI/LLM feature support using Jlama for Openpdfx, using large languange models (llm) on 
+  PDF files. 
 * Text and Font Support: You can add text to PDF documents using various fonts and styles, and extract text from PDF
   files.
 * Graphics and Images: OpenPDF supports the addition of images and graphics to PDF files.
