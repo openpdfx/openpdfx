@@ -39,17 +39,27 @@ The features of OpenPDF include:
 ![Java 21](https://img.shields.io/badge/Java-21-blue?logo=java&logoColor=white)
 ![Java 24](https://img.shields.io/badge/Java-24-blue?logo=java&logoColor=yellow)
 
-## Use OpenPDF as Maven dependency
+## Use Openpdfx as Maven dependency
 
-Add this to your pom.xml file to use the latest version of OpenPDF:
+Openpdfx can be used as a Maven dependency. It is built and distributed using Jitpack.
 
+1. Add Maven dependency to the pom.xml file:
 ```xml
+    <dependency>
+      <groupId>com.github.openpdfx</groupId>
+      <artifactId>openpdfx</artifactId>
+      <version>3.0.0-SNAPSHOT</version>
+    </dependency>
+```
 
-<dependency>
-  <groupId>com.github.librepdf</groupId>
-  <artifactId>openpdf</artifactId>
-  <version>3.0.0</version>
-</dependency>
+2. Add repository to the pom.xml file:
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
 ```
 
 ## License

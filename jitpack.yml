@@ -1,0 +1,8 @@
+jdk:
+  - openjdk21
+before_install:
+  - sdk install maven 3.9.9
+  - sdk use maven 3.9.9
+install:
+  - mvn -v
+  - mvn -q -B -DskipTests -Dgpg.skip=true -Dmaven.javadoc.skip=true install
