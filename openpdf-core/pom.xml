@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.github.openpdfx</groupId>
     <artifactId>openpdfx-parent</artifactId>
-    <version>3.0.1</version>
+    <version>3.0.2</version>
   </parent>
 
   <artifactId>openpdfx</artifactId>
@@ -14,7 +14,7 @@
   <description>Open and Free PDF library. It uses the new package name `org.openpdf`.</description>
 
   <properties>
-    <java-module-name>com.github.librepdf.openpdf</java-module-name>
+    <java-module-name>com.github.openpdfx.openpdfx</java-module-name>
   </properties>
 
   <dependencies>
