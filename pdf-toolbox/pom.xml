@@ -5,11 +5,11 @@
 
   <parent>
     <groupId>com.github.librepdf</groupId>
-    <artifactId>openpdf-parent</artifactId>
+    <artifactId>openpdfx-parent</artifactId>
     <version>3.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>pdf-toolbox</artifactId>
+  <artifactId>pdfx-toolbox</artifactId>
 
   <name>OpenPDF Toolbox</name>
   <description>Examples using OpenPDF</description>

@@ -5,11 +5,11 @@
 
   <parent>
     <groupId>com.github.librepdf</groupId>
-    <artifactId>openpdf-parent</artifactId>
+    <artifactId>openpdfx-parent</artifactId>
     <version>3.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>openpdf</artifactId>
+  <artifactId>openpdfx</artifactId>
   <name>OpenPDF core modern</name>
   <description>Open and Free PDF library. It uses the new package name `org.openpdf`.</description>
 

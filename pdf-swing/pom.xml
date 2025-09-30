@@ -5,11 +5,11 @@
 
   <parent>
     <groupId>com.github.librepdf</groupId>
-    <artifactId>openpdf-parent</artifactId>
+    <artifactId>openpdfx-parent</artifactId>
     <version>3.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>pdf-swing</artifactId>
+  <artifactId>pdfx-swing</artifactId>
   <name>OpenPDF Swing</name>
 
   <properties>

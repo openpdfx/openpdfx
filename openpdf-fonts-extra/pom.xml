@@ -4,11 +4,11 @@
 
   <parent>
     <groupId>com.github.librepdf</groupId>
-    <artifactId>openpdf-parent</artifactId>
+    <artifactId>openpdfx-parent</artifactId>
     <version>3.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>openpdf-fonts-extra</artifactId>
+  <artifactId>openpdfx-fonts-extra</artifactId>
   <name>OpenPDF Fonts Extras</name>
 
   <properties>
