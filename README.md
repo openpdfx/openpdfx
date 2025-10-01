@@ -1,17 +1,17 @@
-# OpenPDFX is an open source Java library for PDF files
+# OpenPdfx is an open source Java library for PDF files
 
-OpenPDFX is an open-source Java library for creating, editing, rendering, and encrypting PDF documents, as well as generating PDFs from HTML. It is licensed under the LGPL and MPL open source licenses. 
+OpenPdfx is an open-source Java library for creating, editing, rendering, and encrypting PDF documents, as well as generating PDFs from HTML. It is licensed under the LGPL and MPL open source licenses. 
 We welcome contributions from other developers. Please feel free to submit pull-requests and bug reports to this GitHub repository.
 
-OpenPDFX is a fork of [OpenPDF](https://github.com/LibrePDF/OpenPDF), with focus on modernization and AI features.
+OpenPdfx is a fork of [OpenPDF](https://github.com/LibrePDF/OpenPDF), with focus on modernization and AI features.
 
-## OpenPDFX version 3.0.2 released 2025-09-30
+## OpenPdfx version 3.0.2 released 2025-09-30
 
 Get version 3.0.2 here: https://github.com/openpdfx/openpdfx/releases/tag/3.0.2 
 
 ## Features
 
-The features of OpenPDF include:
+The features of OpenPdfx include:
 
 * [Openpdf](openpdf-core) Creating PDFs: You can use OpenPDF to create new PDF documents from scratch.
 * Manipulating Existing PDFs: OpenPDF allows you to modify existing PDF documents by adding or removing pages, modifying
@@ -35,9 +35,9 @@ The features of OpenPDF include:
 ![Java 21](https://img.shields.io/badge/Java-21-blue?logo=java&logoColor=white)
 ![Java 24](https://img.shields.io/badge/Java-25-blue?logo=java&logoColor=yellow)
 
-## Use Openpdfx as Maven dependency
+## Use OpenPdfx as Maven dependency
 
-Openpdfx can be used as a Maven dependency. It is built and distributed using Jitpack.
+OpenPdfx can be used as a Maven dependency. It is built and distributed using Jitpack.
 
 1. Add Maven dependency to the pom.xml file:
 ```xml
@@ -60,7 +60,7 @@ Openpdfx can be used as a Maven dependency. It is built and distributed using Ji
 
 ## License
 
-OpenPDF uses dual licensing: when using the library, you may choose either Mozilla Public License Version 2.0
+OpenPdfx uses dual licensing: when using the library, you may choose either Mozilla Public License Version 2.0
 or GNU Lesser General Public License 2.1.  OpenPDF is the LGPL/MPL open source successor of iText, and is based on some forks of iText
 4 svn tag.
 
@@ -126,20 +126,6 @@ OpenPDF-html is a fork of Flying Saucer, forked in june 2025, project started in
 openpdf-renderer is a fork of PDFRenderer, porject started by Sun Labs in 2007.
 OpenPDF-core is a fork of iText, forked in October 2016, iText started in 2000.
 
-OpenPDF ancestors in GitHub (in fork order):
-
-1. [@rtfarte](https://github.com/rtfarte) / [OpenPDF](https://github.com/rtfarte/OpenPDF) - parent
-   of LibrePDF/OpenPDF
-2. [@kulatamicuda](https://github.com/kulatamicuda)
-   / [iText-4.2.0](https://github.com/kulatamicuda/iText-4.2.0)
-3. [@daviddurand](https://github.com/daviddurand)
-   / [iText-4.2.0](https://github.com/daviddurand/iText-4.2.0)
-4. [@ymasory](https://github.com/ymasory) / [iText-4.2.0](https://github.com/ymasory/iText-4.2.0) -
-   original parent on GitHub
-
-
-
-
 ## Android
 
 OpenPDF can be used with Android, more info
@@ -167,10 +153,8 @@ More details: [Contributing](CONTRIBUTING.md)
 
 We have now different versions of OpenPDF, and they require different versions of Java:
 
-- The 2.4.x Branch requires Java 21 or later.
-- The 2.0.x Branch requires Java 17 or later.
-- The 1.4.x Branch requires Java 11 or later.
-- The 1.3.x Branch requires Java 8 or later.
+- The 3.0.x Branch requires Java 21 or later.
+
 
 
 ### OpenPDF Java package name change from com.lowagie to org.openpdf
