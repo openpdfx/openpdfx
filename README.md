@@ -3,7 +3,7 @@
 OpenPdfx is an open-source Java library for creating, editing, rendering, and encrypting PDF documents, as well as generating PDFs from HTML. It is licensed under the LGPL and MPL open source licenses. 
 We welcome contributions from other developers. Please feel free to submit pull-requests and bug reports to this GitHub repository.
 
-OpenPdfx is a fork of [OpenPDF](https://github.com/LibrePDF/OpenPDF), with focus on modernization and AI features.
+OpenPdfx is a fork of [OpenPDF](https://github.com/LibrePDF/OpenPDF), with focus on modernization, innovating new features and AI/llm usage and support.
 
 ## OpenPdfx version 3.0.2 released 2025-09-30
 
