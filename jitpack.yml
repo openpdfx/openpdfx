@@ -1,6 +1,9 @@
 jdk:
   - openjdk25
 
+before_install:
+  - sdk install java 25-open
+
 install:
   - mvn -v
   - mvn -q -B -DskipTests -Dgpg.skip=true -Dmaven.javadoc.skip=true install
