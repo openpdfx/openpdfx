@@ -7,7 +7,7 @@
   <parent>
     <groupId>com.github.openpdfx</groupId>
     <artifactId>openpdfx-parent</artifactId>
-    <version>3.0.3</version>
+    <version>3.0.4-SNAPSHOT</version>
   </parent>
 
   <artifactId>openpdfx-html</artifactId>
