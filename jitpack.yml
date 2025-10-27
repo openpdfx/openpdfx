@@ -1,9 +1,15 @@
+jitpack:
+
 jdk:
   - openjdk25
 
 before_install:
+  - sdk update
+  - sdk install maven 3.9.9
+  - sdk use maven 3.9.9
   - sdk install java 25-open
+  - sdk use java 25-open
 
 install:
   - mvn -v
-  - mvn -q -B -DskipTests -Dgpg.skip=true -Dmaven.javadoc.skip=true install
+  - MAVEN_OPTS="--enable-native-access=ALL-UNNAMED" mvn -q -B -DskipTests -Dgpg.skip=true -Dmaven.javadoc.skip=true install
