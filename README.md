@@ -5,9 +5,9 @@ We welcome contributions from other developers. Please feel free to submit pull-
 
 OpenPdfx is a fork of [OpenPDF](https://github.com/LibrePDF/OpenPDF), with focus on modernization, innovating new features and AI/llm usage and support.
 
-## OpenPdfx version 3.0.2 released 2025-09-30
+## OpenPdfx version 3.0.3 released 2025-10-27
 
-Get version 3.0.2 here: https://github.com/openpdfx/openpdfx/releases/tag/3.0.2 
+Get version 3.0.3 here: https://github.com/openpdfx/openpdfx/releases/tag/3.0.3 
 
 ## Features
 
@@ -43,7 +43,7 @@ OpenPdfx can be used as a Maven dependency. It is built and distributed using Ji
     <dependency>
       <groupId>com.github.openpdfx</groupId>
       <artifactId>openpdfx</artifactId>
-      <version>3.0.2</version>
+      <version>3.0.3</version>
     </dependency>
 ```
 
