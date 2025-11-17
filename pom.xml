@@ -92,6 +92,7 @@
     <pdf-renderer.version>1.0.5</pdf-renderer.version>
     <error_prone.version>2.44.0</error_prone.version>
     <slf4j.version>2.0.17</slf4j.version>
+    <icu4j.version>78.1</icu4j.version>
 
     <!-- test-dependencies -->
     <assertj.version>3.27.6</assertj.version>
@@ -122,6 +123,11 @@
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>
         <version>${commons-io.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.ibm.icu</groupId>
+        <artifactId>icu4j</artifactId>
+        <version>${icu4j.version}</version> 
       </dependency>
       <dependency>
         <groupId>org.jfree</groupId>
