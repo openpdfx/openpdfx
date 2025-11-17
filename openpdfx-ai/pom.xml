@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.github.openpdfx</groupId>
+        <groupId>io.github.openpdfx</groupId>
         <artifactId>openpdfx-parent</artifactId>
         <version>3.0.5-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.github.openpdfx</groupId>
+    <groupId>io.github.openpdfx</groupId>
     <artifactId>openpdfx-ai</artifactId>
     <packaging>jar</packaging>
 
@@ -38,7 +38,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.openpdfx</groupId>
+            <groupId>io.github.openpdfx</groupId>
             <artifactId>openpdfx</artifactId>
             <version>${project.version}</version>
         </dependency>
