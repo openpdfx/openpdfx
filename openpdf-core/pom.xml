@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.github.openpdfx</groupId>
+    <groupId>io.github.openpdfx</groupId>
     <artifactId>openpdfx-parent</artifactId>
     <version>3.0.5-SNAPSHOT</version>
   </parent>
@@ -14,14 +14,13 @@
   <description>Open and Free PDF library. It uses the new package name `org.openpdf`.</description>
 
   <properties>
-    <java-module-name>com.github.openpdfx.openpdfx</java-module-name>
+    <java-module-name>io.github.openpdfx.openpdfx</java-module-name>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.ibm.icu</groupId>
       <artifactId>icu4j</artifactId>
-      <version>78.1</version>
       <optional>true</optional>
     </dependency>
     <dependency>
