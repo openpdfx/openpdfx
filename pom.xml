@@ -49,6 +49,10 @@
   </modules>
   <!-- Distribution config from http://central.sonatype.org/pages/apache-maven.html#distribution-management-and-authentication -->
   <distributionManagement>
+    <repository>
+        <id>central</id>
+        <url>https://central.sonatype.com/api/v1/publisher/maven/deploy</url>
+    </repository>
   </distributionManagement>
 
   <properties>
@@ -172,6 +176,7 @@
     </dependencies>
   </dependencyManagement>
 
+  
   <build>
     <pluginManagement>
       <plugins>
