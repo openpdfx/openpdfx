@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.github.openpdfx</groupId>
+    <groupId>io.github.openpdfx</groupId>
     <artifactId>openpdfx-parent</artifactId>
     <version>3.0.5-SNAPSHOT</version>
   </parent>
@@ -12,12 +12,12 @@
   <name>OpenPDF Fonts Extras</name>
 
   <properties>
-    <java-module-name>com.github.openpdfx.pdfFontsExtra</java-module-name>
+    <java-module-name>io.github.openpdfx.pdfFontsExtra</java-module-name>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>com.github.openpdfx</groupId>
+      <groupId>io.github.openpdfx</groupId>
         <artifactId>openpdfx</artifactId>
         <version>${project.version}</version>
     </dependency>
