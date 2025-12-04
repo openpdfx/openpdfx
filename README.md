@@ -5,9 +5,9 @@ We welcome contributions from other developers. Please feel free to submit pull-
 
 OpenPdfx is a fork of [OpenPDF](https://github.com/LibrePDF/OpenPDF), with focus on modernization, innovating new features and AI/llm usage and support.
 
-## OpenPdfx version 3.0.4 released 2025-10-27
+## OpenPdfx version 3.0.5 released 2025-12-04
 
-Get version 3.0.4 here: https://github.com/openpdfx/openpdfx/releases/tag/3.0.4 
+Get version 3.0.5 here: https://github.com/openpdfx/openpdfx/releases/tag/3.0.5 
 
 ## Features
 
