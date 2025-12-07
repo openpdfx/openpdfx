@@ -46,7 +46,7 @@ jobs:
           # This refers to the secret you set in your repository settings
           GPG_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
-          echo "$GPG_KEY" | base64 --decode | gpg --batch --import
+          echo "$GPG_KEY" | gpg --batch --import
 
       - name: Publish Package to Maven Central
         run: mvn --batch-mode deploy -Prelease -DskipTests
