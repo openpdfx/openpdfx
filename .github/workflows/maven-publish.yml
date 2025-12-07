@@ -20,7 +20,7 @@ jobs:
       - name: Set up JDK and Maven Settings
         uses: actions/setup-java@v5
         with:
-          java-version: '17' # Use a modern LTS version
+          java-version: '21' # Use a modern LTS version
           distribution: 'temurin'
           # Configure Sonatype authentication
           server-id: central
