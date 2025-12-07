@@ -28,7 +28,8 @@ The features of OpenPdfx include:
 * Page Layout: OpenPDF allows you to set the page size, orientation, and other layout properties.
 * PDF 2.0 support (ISO 32000-2).
 
-[![](https://jitpack.io/v/openpdfx/openpdfx.svg)](https://jitpack.io/#openpdfx/openpdfx)
+
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.openpdfx/openpdfx/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.openpdfx/openpdfx)
 ![CI](https://github.com/openpdfx/openpdfx/actions/workflows/maven.yml/badge.svg)
 [![License (LGPL version 2.1)](https://img.shields.io/badge/license-GNU%20LGPL%20version%202.1-blue.svg?style=flat-square)](http://opensource.org/licenses/LGPL-2.1)
 [![License (MPL)](https://img.shields.io/badge/license-Mozilla%20Public%20License-yellow.svg?style=flat-square)](http://opensource.org/licenses/MPL-2.0)
