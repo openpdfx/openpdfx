@@ -109,6 +109,7 @@
                     <dependencyExclusions>
                         <dependencyExclusion>com.github.tjake:jlama-native</dependencyExclusion>
                     </dependencyExclusions>
+                    <excludePackageNames>jlama.native</excludePackageNames>
                 </configuration>
                 <executions>
                     <execution>
