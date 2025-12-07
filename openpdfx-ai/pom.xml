@@ -106,17 +106,12 @@
               <artifactId>maven-javadoc-plugin</artifactId>
               <version>3.12.0</version>
               <configuration>
-                  <skip>true</skip>
+                  <dependencyExclusions>
+                      <dependencyExclusion>com.github.tjake:jlama-native</dependencyExclusion>
+                  </dependencyExclusions>
+                  <failOnError>false</failOnError> 
               </configuration>
-              <executions>
-                  <execution>
-                      <id>attach-javadocs</id>
-                      <goals>
-                          <goal>jar</goal>
-                      </goals>
-                  </execution>
-              </executions>
-          </plugin>
+           </plugin>
           
         </plugins>
     </build>
