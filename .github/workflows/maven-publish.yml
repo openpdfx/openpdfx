@@ -42,7 +42,7 @@ jobs:
           mvn versions:set -DnewVersion=$RELEASE_VERSION --batch-mode
 
       - name: Publish Package to Maven Central
-        run: mvn --batch-mode deploy -DskipTests
+        run: mvn --batch-mode deploy -Prelease -DskipTests
         env:
           # Pass the secrets as environment variables, which the setup-java action 
           # uses to populate a temporary settings.xml file.
