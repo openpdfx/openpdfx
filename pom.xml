@@ -96,7 +96,7 @@
     <icu4j.version>78.2</icu4j.version>
 
     <!-- test-dependencies -->
-    <assertj.version>3.27.6</assertj.version>
+    <assertj.version>3.27.7</assertj.version>
     <checkstyle.version>13.0.0</checkstyle.version>
     <jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
     <junit.version>6.0.2</junit.version>
