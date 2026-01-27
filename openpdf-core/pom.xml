@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>openpdfx</artifactId>
-  <name>OpenPDF core modern</name>
+  <name>OpenPDF PDF library</name>
   <description>Open and Free PDF library. It uses the new package name `org.openpdf`.</description>
 
   <properties>
