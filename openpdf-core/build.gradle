@@ -1,0 +1,54 @@
+description = 'Open and Free PDF library. It uses the new package name `org.openpdf`.'
+
+dependencies {
+    // Optional dependencies
+    compileOnly "com.ibm.icu:icu4j:${icu4jVersion}"
+    compileOnly "org.bouncycastle:bcprov-jdk18on:${bouncycastleVersion}"
+    compileOnly "org.bouncycastle:bcpkix-jdk18on:${bouncycastleVersion}"
+    compileOnly "org.apache.xmlgraphics:fop:${fopVersion}"
+    
+    // Test dependencies
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testImplementation "org.assertj:assertj-core:${assertjVersion}"
+    testImplementation "org.mockito:mockito-core:${mockitoVersion}"
+    testImplementation "commons-io:commons-io:${commonsIoVersion}"
+    testImplementation("org.verapdf:validation-model:${verapdfVersion}") {
+        exclude group: 'org.slf4j'
+    }
+}
+
+// Process filtered resources
+sourceSets {
+    main {
+        resources {
+            srcDir 'src/main/resources'
+            srcDir 'src/main/resources-filtered'
+        }
+    }
+}
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.WARN
+    from('src/main/resources-filtered') {
+        filter { line ->
+            line.replaceAll('\\$\\{project.version\\}', project.version.toString())
+        }
+    }
+}
+
+// Handle duplicates in source jar
+tasks.named('sourcesJar') {
+    duplicatesStrategy = DuplicatesStrategy.WARN
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.WARN
+    manifest {
+        attributes(
+            'Automatic-Module-Name': 'io.github.openpdfx.openpdfx',
+            'Multi-Release': 'true'
+        )
+    }
+}

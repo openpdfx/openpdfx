@@ -1,0 +1,15 @@
+description = 'OpenPDF Swing - Swing-based PDF rendering components'
+
+dependencies {
+    api project(':openpdf-core')
+    api "org.swinglabs:pdf-renderer:${pdfRendererVersion}"
+    api "org.dom4j:dom4j:${dom4jVersion}"
+}
+
+jar {
+    manifest {
+        attributes(
+            'Automatic-Module-Name': 'io.github.openpdfx.pdfSwing'
+        )
+    }
+}

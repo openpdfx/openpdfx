@@ -1,0 +1,9 @@
+rootProject.name = 'openpdfx-parent'
+
+include 'openpdf-core'
+include 'pdf-swing'
+include 'pdf-toolbox'
+include 'openpdf-fonts-extra'
+include 'openpdf-html'
+include 'openpdf-renderer'
+include 'openpdfx-ai'

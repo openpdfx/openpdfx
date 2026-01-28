@@ -1,0 +1,17 @@
+description = 'OpenPDF Fonts Extras - Extended font support'
+
+dependencies {
+    api project(':openpdf-core')
+    
+    // Test dependencies
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+}
+
+jar {
+    manifest {
+        attributes(
+            'Automatic-Module-Name': 'io.github.openpdfx.pdfFontsExtra'
+        )
+    }
+}

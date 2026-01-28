@@ -1,0 +1,45 @@
+description = 'openpdf-html is a CSS 2.1 renderer written in Java. This artifact contains the core rendering and layout code as well as Java2D output.'
+
+dependencies {
+    api "org.htmlunit:neko-htmlunit:${nekoHtmlunitVersion}"
+    api project(':openpdf-core')
+    
+    compileOnly "org.jspecify:jspecify:${jspecifyVersion}"
+    compileOnly "com.google.errorprone:error_prone_annotations:${errorProneVersion}"
+    compileOnly "org.slf4j:slf4j-api:${slf4jVersion}"
+    
+    // Test dependencies
+    testImplementation "org.mockito:mockito-core:${mockitoVersion}"
+    testImplementation "org.slf4j:slf4j-simple:${slf4jVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testImplementation "org.assertj:assertj-core:${assertjVersion}"
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+// Copy LICENSE files
+tasks.register('copyLicenseFiles', Copy) {
+    from('../') {
+        include 'LICENSE*'
+    }
+    into 'build/resources/main/META-INF'
+}
+
+processResources.dependsOn copyLicenseFiles
+
+jar {
+    manifest {
+        attributes(
+            'Automatic-Module-Name': 'flying.saucer',
+            'Bundle-SymbolicName': 'org.openpdf.flying.saucer.core'
+        )
+    }
+}

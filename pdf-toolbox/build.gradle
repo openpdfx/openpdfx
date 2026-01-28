@@ -1,0 +1,23 @@
+description = 'Examples using OpenPDF'
+
+dependencies {
+    api project(':openpdf-core')
+    api "org.jfree:jfreechart:${jfreechartVersion}"
+    api "org.jfree:jcommon:${jcommonVersion}"
+    compileOnly "org.bouncycastle:bcprov-jdk18on:${bouncycastleVersion}"
+    compileOnly "org.bouncycastle:bcpkix-jdk18on:${bouncycastleVersion}"
+    
+    // Test dependencies
+    testImplementation "jakarta.servlet:jakarta.servlet-api:${jakartaServletApiVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testImplementation "org.assertj:assertj-core:${assertjVersion}"
+}
+
+jar {
+    manifest {
+        attributes(
+            'Automatic-Module-Name': 'io.github.openpdfx.pdfToolbox'
+        )
+    }
+}
