@@ -48,6 +48,18 @@ OpenPdfx can be used as a Maven dependency. It is built and distributed on Maven
     </dependency>
 ```
 
+## Build with Gradle
+
+OpenPdfx also supports building with Gradle as an alternative to Maven.
+
+To build the project using Gradle:
+
+```bash
+./gradlew build
+```
+
+For more details on building with Gradle, see [GRADLE_BUILD.md](GRADLE_BUILD.md).
+
 ## License
 
 OpenPdfx uses dual licensing: when using the library, you may choose either Mozilla Public License Version 2.0
