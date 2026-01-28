@@ -178,6 +178,11 @@ buildNumber.properties
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
 
+### Gradle template
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
 ### Custom
 *.rtf
 *.html

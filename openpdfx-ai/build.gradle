@@ -1,0 +1,54 @@
+description = 'openpdfx is an open source library AI library for openpdfx.'
+
+// Detect OS and architecture for native dependencies
+import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
+
+def os = DefaultNativePlatform.currentOperatingSystem
+def arch = DefaultNativePlatform.currentArchitecture
+
+def osName = ''
+def osArch = ''
+
+if (os.isLinux()) {
+    osName = 'linux'
+} else if (os.isMacOsX()) {
+    osName = 'macos'
+} else if (os.isWindows()) {
+    osName = 'windows'
+}
+
+if (arch.isAmd64()) {
+    osArch = 'x86_64'
+} else if (arch.isArm64() || arch.isAarch64()) {
+    osArch = 'aarch_64'
+}
+
+dependencies {
+    api project(':openpdf-core')
+    api "com.github.tjake:jlama-core:${jlamaVersion}"
+    
+    // Native library with classifier
+    if (osName && osArch) {
+        api "com.github.tjake:jlama-native:${jlamaVersion}:${osName}-${osArch}"
+    }
+    
+    api "org.apache.commons:commons-lang3:${commonsLang3Version}"
+    api "org.yaml:snakeyaml:${snakeyamlVersion}"
+}
+
+compileJava {
+    options.compilerArgs += ['--add-modules', 'jdk.incubator.vector']
+}
+
+javadoc {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    failOnError = false
+}
+
+jar {
+    manifest {
+        attributes(
+            'Automatic-Module-Name': 'io.github.openpdfx.ai'
+        )
+    }
+}

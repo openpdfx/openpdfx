@@ -1,0 +1,83 @@
+plugins {
+    id 'java-library'
+}
+
+// Apply to all projects
+allprojects {
+    group = project.findProperty('group') ?: 'io.github.openpdfx'
+    version = project.findProperty('version') ?: '3.0.8-SNAPSHOT'
+    
+    repositories {
+        mavenCentral()
+    }
+}
+
+// Apply to all subprojects
+subprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'maven-publish'
+    
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(project.findProperty('javaVersion') ?: '21')
+        }
+        withSourcesJar()
+        withJavadocJar()
+    }
+    
+    tasks.withType(JavaCompile) {
+        options.encoding = project.findProperty('sourceEncoding') ?: 'UTF-8'
+        options.compilerArgs << '-Xlint:unchecked'
+    }
+    
+    tasks.withType(Javadoc) {
+        options.encoding = project.findProperty('sourceEncoding') ?: 'UTF-8'
+        options.addStringOption('Xdoclint:none', '-quiet')
+    }
+    
+    test {
+        useJUnitPlatform()
+        systemProperty 'net.bytebuddy.experimental', 'true'
+    }
+    
+    // Publishing configuration
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                from components.java
+                
+                pom {
+                    name = project.name
+                    description = project.description ?: 'Open and Free PDF library'
+                    url = 'https://github.com/openpdfx/openpdfx'
+                    
+                    licenses {
+                        license {
+                            name = 'GNU Lesser General Public License (LGPL), Version 2.1'
+                            url = 'https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html'
+                            distribution = 'repo'
+                        }
+                        license {
+                            name = 'Mozilla Public License Version 2.0'
+                            url = 'https://www.mozilla.org/en-US/MPL/2.0/'
+                            distribution = 'repo'
+                        }
+                    }
+                    
+                    developers {
+                        developer {
+                            name = 'The OpenPDF Project'
+                            organizationUrl = 'https://github.com/openpdfx'
+                        }
+                    }
+                    
+                    scm {
+                        url = 'scm:git:https://github.com/openpdfx/openpdfx'
+                        connection = 'scm:git:https://github.com/openpdfx/openpdfx.git'
+                        developerConnection = 'scm:git:https://github.com/openpdfx/openpdfx.git'
+                    }
+                }
+            }
+        }
+    }
+}
