@@ -92,6 +92,9 @@ public final class PdfBatchUtils {
     /** Split one PDF into per-page PDFs in the given directory (files will be named baseName_pageX.pdf). */
     public record SplitJob(Path input, Path outputDir, String baseName) {}
 
+    /** Rotate pages in a PDF by the specified angle (0, 90, 180, or 270 degrees). */
+    public record RotateJob(Path input, Path output, int rotation) {}
+
 
     // ------------------------- Merge -------------------------
 
@@ -216,6 +219,107 @@ public final class PdfBatchUtils {
     /** Batch split. */
     public static BatchResult<List<Path>> batchSplit(List<SplitJob> jobs, Consumer<List<Path>> onSuccess, Consumer<Throwable> onFailure) {
         return PdfBatch.run(jobs.stream().map(j -> (Callable<List<Path>>) () -> split(j.input, j.outputDir, j.baseName)).toList(), onSuccess, onFailure);
+    }
+
+    // ------------------------- Rotate -------------------------
+
+    /**
+     * Rotate all pages in a PDF by the specified angle.
+     * 
+     * @param input the input PDF file
+     * @param output the output PDF file
+     * @param rotation the rotation angle in degrees (0, 90, 180, or 270)
+     * @return the output path
+     * @throws IOException if file I/O fails
+     * @throws DocumentException if PDF manipulation fails
+     * @throws IllegalArgumentException if rotation is not 0, 90, 180, or 270
+     */
+    public static Path rotatePages(Path input, Path output, int rotation) throws IOException, DocumentException {
+        Objects.requireNonNull(input, "input");
+        Objects.requireNonNull(output, "output");
+        
+        // Normalize and validate rotation
+        rotation = normalizeRotation(rotation);
+        if (rotation != 0 && rotation != 90 && rotation != 180 && rotation != 270) {
+            throw new IllegalArgumentException("Rotation must be 0, 90, 180, or 270 degrees, got: " + rotation);
+        }
+        
+        Files.createDirectories(output.getParent());
+        
+        try (PdfReader reader = new PdfReader(Files.readAllBytes(input));
+                var out = new FileOutputStream(output.toFile())) {
+            PdfStamper stamper = new PdfStamper(reader, out);
+            
+            int n = reader.getNumberOfPages();
+            for (int i = 1; i <= n; i++) {
+                PdfDictionary page = reader.getPageN(i);
+                int currentRotation = reader.getPageRotation(i);
+                int newRotation = (currentRotation + rotation) % 360;
+                page.put(PdfName.ROTATE, new PdfNumber(newRotation));
+            }
+            
+            stamper.close();
+        }
+        return output;
+    }
+
+    /**
+     * Rotate a single page in a PDF by the specified angle.
+     * 
+     * @param input the input PDF file
+     * @param output the output PDF file
+     * @param pageNumber the page number (1-based)
+     * @param rotation the rotation angle in degrees (0, 90, 180, or 270)
+     * @return the output path
+     * @throws IOException if file I/O fails
+     * @throws DocumentException if PDF manipulation fails
+     * @throws IllegalArgumentException if rotation is not 0, 90, 180, or 270 or page number is invalid
+     */
+    public static Path rotatePage(Path input, Path output, int pageNumber, int rotation) 
+            throws IOException, DocumentException {
+        Objects.requireNonNull(input, "input");
+        Objects.requireNonNull(output, "output");
+        
+        // Normalize and validate rotation
+        rotation = normalizeRotation(rotation);
+        if (rotation != 0 && rotation != 90 && rotation != 180 && rotation != 270) {
+            throw new IllegalArgumentException("Rotation must be 0, 90, 180, or 270 degrees, got: " + rotation);
+        }
+        
+        Files.createDirectories(output.getParent());
+        
+        try (PdfReader reader = new PdfReader(Files.readAllBytes(input));
+                var out = new FileOutputStream(output.toFile())) {
+            
+            int totalPages = reader.getNumberOfPages();
+            if (pageNumber < 1 || pageNumber > totalPages) {
+                throw new IllegalArgumentException(
+                    "Page number must be between 1 and " + totalPages + ", got: " + pageNumber);
+            }
+            
+            PdfStamper stamper = new PdfStamper(reader, out);
+            
+            PdfDictionary page = reader.getPageN(pageNumber);
+            int currentRotation = reader.getPageRotation(pageNumber);
+            int newRotation = (currentRotation + rotation) % 360;
+            page.put(PdfName.ROTATE, new PdfNumber(newRotation));
+            
+            stamper.close();
+        }
+        return output;
+    }
+
+    /** Batch rotate pages. */
+    public static BatchResult<Path> batchRotatePages(List<RotateJob> jobs, Consumer<Path> onSuccess, Consumer<Throwable> onFailure) {
+        return PdfBatch.run(jobs.stream().map(j -> (Callable<Path>) () -> rotatePages(j.input, j.output, j.rotation)).toList(), onSuccess, onFailure);
+    }
+
+    /**
+     * Normalize rotation to 0-359 range.
+     */
+    private static int normalizeRotation(int rotation) {
+        rotation = rotation % 360;
+        return rotation < 0 ? rotation + 360 : rotation;
     }
 
     // ------------------------- Convenience helpers -------------------------
