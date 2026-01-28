@@ -11,9 +11,14 @@ dependencies {
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
     testImplementation "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
     testImplementation "org.assertj:assertj-core:${assertjVersion}"
     testImplementation "org.mockito:mockito-core:${mockitoVersion}"
     testImplementation "commons-io:commons-io:${commonsIoVersion}"
+    testImplementation "org.bouncycastle:bcprov-jdk18on:${bouncycastleVersion}"
+    testImplementation "org.bouncycastle:bcpkix-jdk18on:${bouncycastleVersion}"
+    testImplementation "com.ibm.icu:icu4j:${icu4jVersion}"
+    testImplementation "org.apache.xmlgraphics:fop:${fopVersion}"
     testImplementation("org.verapdf:validation-model:${verapdfVersion}") {
         exclude group: 'org.slf4j'
     }
