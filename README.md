@@ -34,6 +34,7 @@ The features of OpenPdfx include:
 [![License (LGPL version 2.1)](https://img.shields.io/badge/license-GNU%20LGPL%20version%202.1-blue.svg?style=flat-square)](http://opensource.org/licenses/LGPL-2.1)
 [![License (MPL)](https://img.shields.io/badge/license-Mozilla%20Public%20License-yellow.svg?style=flat-square)](http://opensource.org/licenses/MPL-2.0)
 ![Java 21](https://img.shields.io/badge/Java-21-blue?logo=java&logoColor=yellow)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/fe9d121c83b34f578ba006241bcafc34)](https://app.codacy.com/gh/openpdfx/openpdfx/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 ## Use OpenPdfx as Maven dependency
 
