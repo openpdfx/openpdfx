@@ -16,3 +16,10 @@ jar {
         )
     }
 }
+
+// Create target directory for tests (Maven convention used in test code)
+test {
+    doFirst {
+        file("${projectDir}/target").mkdirs()
+    }
+}
