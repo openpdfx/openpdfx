@@ -33,7 +33,7 @@ The features of OpenPdfx include:
 ![CI](https://github.com/openpdfx/openpdfx/actions/workflows/maven.yml/badge.svg)
 [![License (LGPL version 2.1)](https://img.shields.io/badge/license-GNU%20LGPL%20version%202.1-blue.svg?style=flat-square)](http://opensource.org/licenses/LGPL-2.1)
 [![License (MPL)](https://img.shields.io/badge/license-Mozilla%20Public%20License-yellow.svg?style=flat-square)](http://opensource.org/licenses/MPL-2.0)
-![Java 25](https://img.shields.io/badge/Java-25-blue?logo=java&logoColor=yellow)
+![Java 21](https://img.shields.io/badge/Java-21-blue?logo=java&logoColor=yellow)
 
 ## Use OpenPdfx as Maven dependency
 
@@ -143,7 +143,7 @@ More details: [Contributing](CONTRIBUTING.md)
 
 We have now different versions of OpenPDF, and they require different versions of Java:
 
-- The 3.0.x Branch requires Java 25 or later.
+- The 3.0.x Branch requires Java 21 or later.
 
 ### Supporting complex glyph substitution/ Ligature substitution
 
